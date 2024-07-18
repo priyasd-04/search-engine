@@ -1,0 +1,30 @@
+TEST.txt 
+Bad Queries 
+Cxmputer sciencx
+Computer data science informatics business information management 
+To be or not to be
+Only highly specific words 
+Konnichiwa
+Pineapple on a pizza?
+i me my myself we our ours ourselves you your yours yourself yourselves he him his himself 
+abcsdkvdsfnsggireogkregl
+Red velvet cake
+superior Database design
+
+Search engine improvements: 
+To improve the runtime for longer search queries, we implemented indexing the index instead of storing the entire index in a single .txt file. Now we store each token in a separate index .txt file based on its first character (0-9, a-z), so we look up tokens much faster. 
+We used Porterstemmer() from NLTK to stem tokens as we are tokenizing words when building the index, and also stemmed tokens in the search query for better matches in the case of accidentally misspelled words. For queries that don’t return any initial results, we print a message to the user “Your query doesn't exist in our database. Perhaps you misspelled it, can you try again?” and prompt them to enter a new search query. 
+
+Good Queries: 
+Cristina Lopes
+Machine learning
+Alberto krone-martinss
+Information AND computer Science
+vOLLEYBALL
+Popcorn
+Business information management 
+ACM
+Cheeseburger
+League of legends
+
+To improve the runtime for longer search queries, we split the index into separate term ranges during the offloading process. Now we store each token in a separate index .pkl file based on its first character (0-9, a-z), so we look up tokens much faster.
